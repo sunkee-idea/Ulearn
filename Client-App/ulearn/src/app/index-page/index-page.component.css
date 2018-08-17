@@ -1,0 +1,48 @@
+.hero_single.version_2 .wrapper {
+    background: linear-gradient(to right,#1e5590f0,#1654968f, #0a3461db) !important;
+}
+header.header.sticky {
+    transition: all .3s ease-in-out;
+    background: #480048;
+    background: linear-gradient(to right,#133a63,#0d2e50) !important;
+    padding: 15px 20px;
+}
+.hero_single.version_2:before {
+    background: url('../../assets/img/banner2.jpg') center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+footer {
+    background: linear-gradient(to bottom right,#f7f7f7,#eafbff);
+    color: #082f56;
+}
+footer h5 {
+    color: #0f3256;
+    margin: 25px 0;
+}
+footer ul li a i {
+    color: #103359;
+}
+.follow_us ul li:first-child {
+    color: #10345a;
+    font-weight: 500;
+    font-size: 13px;
+    font-size: .8125rem;
+}
+footer ul li a {
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    color: #11355b;
+    opacity: .7;
+}
+.call_section {
+    background: url('../../assets/img/slide_4.jpg') center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 400px;
+    padding: 10% 0;
+}
