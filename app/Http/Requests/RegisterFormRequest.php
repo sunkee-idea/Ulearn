@@ -33,7 +33,8 @@ class RegisterFormRequest extends FormRequest
             'phone' => 'required|max:11',
             'address' => 'required|string',
             'institution'=>'required|string',
-            'course'=>'required|string'
+            'course'=>'required|string',
+            'state'=>'required|string'
         ];
     }
 }

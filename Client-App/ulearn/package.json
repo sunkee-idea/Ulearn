@@ -21,8 +21,12 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/pwa": "^0.7.2",
     "@angular/router": "^6.0.3",
+    "@auth0/angular-jwt": "^2.0.0",
     "@ng-bootstrap/ng-bootstrap": "^2.2.2",
     "core-js": "^2.5.4",
+    "crypto-js": "^3.1.9-1",
+    "jwt-decode": "^2.2.0",
+    "ngx-toastr": "^8.8.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

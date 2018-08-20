@@ -54,3 +54,9 @@
     border: none;
     cursor: pointer;
 }
+header.header-register{
+    transition: all .3s ease-in-out;
+    background: #480048;
+    background: linear-gradient(to right,#133a63,#0d2e50) !important;
+    padding: 15px 20px;
+}

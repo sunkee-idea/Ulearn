@@ -23,28 +23,28 @@ class AuthController extends Controller
     public function register(RegisterFormRequest $request)
     {
 
-        if(!is_dir($this->path)){
-           // mkdir($this->path,0777,true);
-           File::makeDirectory($this->path, 0777, true);
-        }
-
-        if($request->image){
-            $explode = explode(',',$request->image);
-
-            $decoded = base64_decode($explode[1]);
-
-            if(str_contains($explode[0],'jpeg'))
-                $extension = 'jpg';
-            else
-                $extension = 'png';
-            $fileName = str_random().'.'.$extension;
-            $path = $this->path.'/'.$fileName;
-
-            file_put_contents($path,$decoded);
-            //$filePath = $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/postFiles/'.$fileName;
-            $filePath = 'upload/users/'.$fileName;
-
-
+//        if(!is_dir($this->path)){
+//           // mkdir($this->path,0777,true);
+//           File::makeDirectory($this->path, 0777, true);
+//        }
+//
+//        if($request->image) {
+//            $explode = explode(',', $request->image);
+//
+//            $decoded = base64_decode($explode[1]);
+//
+//            if (str_contains($explode[0], 'jpeg'))
+//                $extension = 'jpg';
+//            else
+//                $extension = 'png';
+//            $fileName = str_random() . '.' . $extension;
+//            $path = $this->path . '/' . $fileName;
+//
+//            file_put_contents($path, $decoded);
+//            //$filePath = $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/postFiles/'.$fileName;
+//            $filePath = 'upload/users/' . $fileName;
+//
+//        }
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
@@ -52,14 +52,14 @@ class AuthController extends Controller
                 'department' => $request->department,
                 'gender' => $request->gender,
                 'password' => bcrypt($request->password),
-                'image' => $filePath,
                 'institution'=>$request->institution,
                 'course_of_study'=>$request->course,
-                'address' => $request->address
+                'address' => $request->address,
+                'state'=>$request->state
             ]);
 
             return response()->json(['user' => $user]);
-        }
+
         return response()->json(['error' => $request->all()]);
 
     }
